@@ -3,66 +3,88 @@
     <head>
         <title>YouTube.com Clone</title>
         <style>
+            p{
+                font-family: Arial;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
             .thumbnail{
+                width: 100%;
                 display: block;
-                width: 300px;
             }
             .search-bar{
                 display: block;
             }
-            .video-title {
-                font-size: 20px;
-                font-weight: bold;
-                font-style: italic;
-                width: 300px;
-                line-height: 24px;
+            .video-title{
+                margin-top: 0;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 12px;
             }
-
             .video-stats,.video-author {
                 display: block;
                 color: rgb(96, 96, 69);
-                font-size: 14px;
+                font-size: 13px;
+                margin-bottom: 5px;
             }
 
             .video-preview{
-                width: 300px;
-                display: inline-block;
-                vertical-align: top;
-                margin-right: 20px;
-                margin-left: 20px;
+
+            }
+            .video-ch-grid{
+                display: grid;
+                grid-template-columns: 50px 1fr;
+            }
+            .channel-pic{
+                padding-right: 5px;
+            }
+            .video-info{
+            }
+            .profile-pic{
+                width: 100%;
+                border-radius: 40px;
+            }
+            .thumbnail-row{
+                margin-bottom: 12px;
+            }
+            .video-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 16px;
+                row-gap: 40px;
             }
         </style>
     </head>
     <body>
         <input class="search-bar" type="text" placeholder="Search">
 
-        <div class="video-preview">
-            <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        <div class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+                </div>
             
-            <p class="video-title">
-                Talking Tech and AI with Google CEO Sundar Pichai!
-            </p>
-            <p class="video-author">
-                Marques Brownlee
-            </p>
-            <p class="video-stats">
-                3.4M views &#183; 6 months ago
-            </p>
+                <div class="video-ch-grid">
+                    <div class="channel-pic">
+                        <img class="profile-pic" src="Channel-pics/channel-1.jpeg">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            <strong>Talking Tech and AI with Google CEO Sundar Pichai!</strong>
+                        </p>
+                        <p class="video-author">
+                            Marques Brownlee
+                        </p>
+                        <p class="video-stats">
+                            3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+            
+                </div>
+            </div>
         </div>
-
-        <div class="video-preview">
-            <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
         
-            <p class="video-title">
-                Talking Tech and AI with Google CEO Sundar Pichai!
-            </p>
-            <p class="video-author">
-                Marques Brownlee
-            </p>
-            <p class="video-stats">
-                3.4M views &#183; 6 months ago
-            </p>
-        </div>
         
     </body>
 </html>
